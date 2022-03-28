@@ -1,22 +1,12 @@
-import { scrollToElement } from '../utils/scroll.js';
+import { onElementLoaded } from '../utils/onElementLoaded.js';
+import { executeScroll } from '../utils/scroll.js';
 
 /**
- * Seek for elements with 'js-scroll' class and inserts the "clickToScroll" function
+ * This archive has as purpose to execute functions automatically when the DOM finishes it's loading
+ * It must imports lists of objects which have the following structure
+ * @obj {selector: string, callback: function}
  */
-onElementLoaded('.js-scroll', () => {
-    const createScrollTo = (element) => {
-        const target = document.getElementById(element.dataset['scroll']);
 
-        if(!target) return undefined;
-
-        return () => {
-            scrollToElement(target);
-        };
-    };
-
-    const links = document.querySelectorAll('.js-scroll');
-
-    Array.prototype.forEach.call(links, (element) => {
-        element.addEventListener('click', createScrollTo(element));
-    });
+Array.prototype.forEach.call(executeScroll, (execute) => {
+    onElementLoaded(execute.selector, execute.callback);
 });
