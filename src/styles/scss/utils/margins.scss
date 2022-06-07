@@ -1,53 +1,53 @@
 /* Margins */
 @for $index from 1 through 5 {
     .m-#{$index} {
-        margin: $spacing-#{$index} !important;
+        margin: nth($spacings, $index) !important;
     }
     .mt-#{$index} {
-        margin-top: $spacing-#{$index} !important;
+        margin-top: nth($spacings, $index) !important;
     }
     .mr-#{$index} {
-        margin-right: $spacing-#{$index} !important;
+        margin-right: nth($spacings, $index) !important;
     }
     .mb-#{$index} {
-        margin-bottom: $spacing-#{$index} !important;
+        margin-bottom: nth($spacings, $index) !important;
     }
     .ml-#{$index} {
-        margin-left: $spacing-#{$index} !important;
+        margin-left: nth($spacings, $index) !important;
     }
     .my-#{$index} {
-        margin-top: $spacing-#{$index} !important;
-        margin-bottom: $spacing-#{$index} !important;
+        margin-top: nth($spacings, $index) !important;
+        margin-bottom: nth($spacings, $index) !important;
     }
     .mx-#{$index} {
-        margin-right: $spacing-#{$index} !important;
-        margin-left: $spacing-#{$index} !important;
+        margin-right: nth($spacings, $index) !important;
+        margin-left: nth($spacings, $index) !important;
     }
 }
 
 /* Paddings */
 @for $index from 1 through 5 {
     .p-#{$index} {
-        margin: $spacing-#{$index} !important;
+        margin: nth($spacings, $index) !important;
     }
     .pt-#{$index} {
-        margin-top: $spacing-#{$index} !important;
+        margin-top: nth($spacings, $index) !important;
     }
     .pr-#{$index} {
-        margin-right: $spacing-#{$index} !important;
+        margin-right: nth($spacings, $index) !important;
     }
     .pb-#{$index} {
-        margin-bottom: $spacing-#{$index} !important;
+        margin-bottom: nth($spacings, $index) !important;
     }
     .pl-#{$index} {
-        margin-left: $spacing-#{$index} !important;
+        margin-left: nth($spacings, $index) !important;
     }
     .py-#{$index} {
-        margin-top: $spacing-#{$index} !important;
-        margin-bottom: $spacing-#{$index} !important;
+        margin-top: nth($spacings, $index) !important;
+        margin-bottom: nth($spacings, $index) !important;
     }
     .px-#{$index} {
-        margin-right: $spacing-#{$index} !important;
-        margin-left: $spacing-#{$index} !important;
+        margin-right: nth($spacings, $index) !important;
+        margin-left: nth($spacings, $index) !important;
     }
 }
